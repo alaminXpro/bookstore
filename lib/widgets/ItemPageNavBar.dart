@@ -32,7 +32,9 @@ class ItemPageNavBar extends StatelessWidget {
               ),
             ),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, "CartPage");
+              },
               icon: Icon(CupertinoIcons.cart_badge_plus, color: Colors.white),
               label: Text(
                 "Add to Cart",
