@@ -7,10 +7,10 @@ class ItemPageNavBar extends StatelessWidget {
     return BottomAppBar(
       child: Container(
         // height: 90,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(25),
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.5),

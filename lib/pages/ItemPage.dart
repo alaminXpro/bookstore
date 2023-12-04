@@ -7,6 +7,8 @@ import '../widgets/ItemPageNavBar.dart';
 
 class ItemPage extends StatelessWidget {
   @override
+  final List<String> dropdownItems = ['Good', 'Better', 'Best', 'Excellent'];
+  String selectedValue = 'Good';
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFEDECF2),
@@ -171,7 +173,7 @@ class ItemPage extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                  child: Text("2020",
+                                  child: Text("2023",
                                       style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
@@ -183,7 +185,39 @@ class ItemPage extends StatelessWidget {
                           )
                         ],
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: Row(
+                        children: [ Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Select Quality',
+                              style: TextStyle(fontSize: 20,
+                              color: Colors.blue,),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: DropdownButton<String>(
+                                value: selectedValue,
+                                onChanged: (String? value) {
+                                  selectedValue = value!;
+                                },
+                                items: dropdownItems
+                                    .map<DropdownMenuItem<String>>((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ]
+                      ),
+                    ),
                   ],
                 ),
               ),
