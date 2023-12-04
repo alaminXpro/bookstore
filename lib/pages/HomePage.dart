@@ -2,7 +2,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import '../widgets/CategoriesWidget.dart';
 import '../widgets/HomeAppBar.dart';
+import '../widgets/ItemsWidget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -54,6 +56,39 @@ class HomePage extends StatelessWidget {
                       ],
                     )
                 ),
+                //Categories
+                Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 10,
+                    ),
+                    child: Text(
+                        "Categories",
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                        )
+                    )
+                ),
+                //Categories Widget
+                CategoriesWidget(),
+                //Items
+                Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                    child: Text(
+                        "Best Selling",
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                        )
+                    )
+                ),
+                //ItemsWidget
+                ItemsWidget(),
               ],
             ),
           ),
