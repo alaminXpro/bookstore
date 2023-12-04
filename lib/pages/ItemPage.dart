@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../widgets/ItemAppBar.dart';
+import '../widgets/ItemPageNavBar.dart';
 
 class ItemPage extends StatelessWidget {
   @override
@@ -190,6 +191,7 @@ class ItemPage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: ItemPageNavBar(),
     );
   }
 }
