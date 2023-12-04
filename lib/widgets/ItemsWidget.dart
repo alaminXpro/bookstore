@@ -4,7 +4,7 @@ class ItemsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      childAspectRatio: 0.67,
+      childAspectRatio: 0.65,
       physics:NeverScrollableScrollPhysics(),
       crossAxisCount: 2,
       shrinkWrap: true,
@@ -90,9 +90,35 @@ class ItemsWidget extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           )
                       ),
-                      Icon(
-                        Icons.shopping_cart_checkout,
-                        color: Colors.blue,
+                      InkWell(
+                          onTap: (){
+                            //Navigator.pushNamed(context, "CartPage");
+                          },
+                          child: Container(
+                              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                              decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Icon(
+                                    Icons.shopping_bag_outlined,
+                                    color: Colors.white,
+                                    size: 15,
+                                  ),
+                                  Text(
+                                      "Buy Now",
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.white,
+                                      )
+                                  )
+                                ],
+
+                              )
+                          )
                       )
                     ],
                   ),
